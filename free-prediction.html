@@ -1,0 +1,94 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Prediction - Texas Lotto Smart Predictor</title>
+    <style>
+        /* Same styles as index.html for consistent layout */
+        html, body { height: 100%; margin: 0; padding: 0; }
+        body {
+            background: rgba(255, 255, 255, 0.3) fixed;
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #000000;
+            text-align: center;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            max-width: 90%;
+            margin: 30px auto;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 25px;
+            box-shadow: 0 6px 25px rgba(0,0,0,0.25);
+        }
+        .logo { max-width: 450px; width: 85%; margin: 0 auto 50px auto; }
+        h1 { font-size: 58px; color: #0047AB; margin: 0 0 40px 0; text-shadow: 3px 3px 6px rgba(0,0,0,0.3); line-height: 1.2; }
+        .algo-explain { font-size: 28px; line-height: 1.8; margin: 0 auto 60px; max-width: 95%; font-weight: 500; text-shadow: 2px 2px 4px rgba(0,0,0,0.2); }
+        .numbers { margin: 70px auto; min-height: 180px; }
+        .ball { display: inline-block; width: 110px; height: 110px; line-height: 110px; background: white; color: #d32f2f; font-size: 44px; font-weight: bold; border-radius: 50%; margin: 22px; box-shadow: 0 10px 25px rgba(0,0,0,0.4); }
+        .disclaimer { font-size: 20px; color: #333333; margin-top: 80px; line-height: 1.5; text-shadow: 1px 1px 3px rgba(0,0,0,0.1); }
+        @media (max-width: 768px) { h1 { font-size: 42px; } .algo-explain { font-size: 22px; } .ball { width: 90px; height: 90px; line-height: 90px; font-size: 36px; margin: 18px; } .logo { max-width: 320px; } .container { padding: 30px; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://content.govdelivery.com/attachments/fancy_images/TXLOTTERY/2022/02/5571829/lotto-texas-extra-logo_original.jpg" alt="Official Lotto Texas Logo" class="logo">
+
+        <h1>Your Free Basic Prediction</h1>
+        <p class="algo-explain">
+            Using our powerful basic algorithm — which incorporates historical data trends and random optimization — here is your single free number set. 
+            This entry-level system provides a solid starting point, but for exponentially higher potential, upgrade to Premium for our exclusive top-secret AI delivering the top 10 elite combinations.
+        </p>
+        
+        <div id="numbers" class="numbers"></div>
+        
+        <p class="disclaimer">For entertainment purposes only. Lotteries are random — no guarantees. Upgrade for advanced predictions!</p>
+    </div>
+
+    <!-- Same background script -->
+    <script>
+        const backgrounds = [
+            'https://i.ytimg.com/vi/JCnRa03ccEc/maxresdefault.jpg',
+            'https://i.ytimg.com/vi/rbWJwD_bQfU/maxresdefault.jpg',
+            'https://i.ytimg.com/vi/Wmvh8gkY-QQ/maxresdefault.jpg',
+            'https://upload.wikimedia.org/wikipedia/commons/f/f7/Texas_Lottery_drawing.jpg',
+            'https://townsquare.media/site/159/files/2021/08/attachment-RS34331_GettyImages-916223242-scr.jpg',
+            'https://media.khou.com/assets/KHOU/images/d609af6e-718f-44c4-95f4-08ded73c0ae3/d609af6e-718f-44c4-95f4-08ded73c0ae3_1920x1080.jpg'
+        ];
+        const randomBg = backgrounds[Math.floor(Math.random() * backgrounds.length)];
+        document.body.style.backgroundImage = `url('${randomBg}')`;
+    </script>
+
+    <!-- Basic free prediction: 1 random set (no hot weighting) -->
+    <script>
+        function generateBasicNumbers() {
+            const numbers = new Set();
+            while (numbers.size < 6) {
+                numbers.add(Math.floor(Math.random() * 54) + 1);
+            }
+            return Array.from(numbers).sort((a, b) => a - b);
+        }
+
+        const nums = generateBasicNumbers();
+        const output = document.getElementById('numbers');
+        nums.forEach(n => {
+            const ball = document.createElement('div');
+            ball.className = 'ball';
+            ball.textContent = n.toString().padStart(2, '0');
+            output.appendChild(ball);
+        });
+    </script>
+    <script>generateBasicNumbers();</script> <!-- Auto-generate on load -->
+</body>
+</html>
