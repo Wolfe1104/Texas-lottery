@@ -11,7 +11,7 @@
             padding: 0;
         }
         body {
-            background: rgba(255, 255, 255, 0.5) fixed; /* 50% white fade - less translucency */
+            background: rgba(255, 255, 255, 0.5) fixed; /* 50% white fade */
             background-size: cover;
             background-position: center center;
             background-repeat: no-repeat;
@@ -21,7 +21,7 @@
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-            font-family: Arial, sans-serif;
+            font-family: Arial, Helvetica, sans-serif;
         }
         .container {
             flex: 1;
@@ -29,116 +29,8 @@
             flex-direction: column;
             justify-content: center;
             max-width: 90%;
-            margin: 20px auto;
-            padding: 30px;
-            background: rgba(255, 255, 255, 0.8);
-            border-radius: 20px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-        }
-        .logo {
-            max-width: 400px;
-            width: 80%;
-            margin: 0 auto 40px auto;
-        }
-        h1 {
-            font-size: 52px;
-            color: #0047AB; /* Cobalt blue */
-            margin: 0 0 30px 0;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-        }
-        .description {
-            font-size: 24px;
-            line-height: 1.6;
-            margin: 0 auto 50px;
-            max-width: 95%;
-        }
-        button {
-            padding: 25px 60px;
-            font-size: 28px;
-            background: #ffcc00;
-            color: black;
-            border: none;
-            border-radius: 15px;
-            cursor: pointer;
-            box-shadow: 0 6px 15px rgba(0,0,0,0.3);
-            margin-bottom: 50px;
-        }
-        button:hover {
-            background: #ffd700;
-        }
-        .numbers {
-            margin: 60px auto;
-            min-height: 160px;
-        }
-        .ball {
-            display: inline-block;
-            width: 100px;
-            height: 100px;
-            line-height: 100px;
-            background: white;
-            color: #d32f2f;
-            font-size: 40px;
-            font-weight: bold;
-            border-radius: 50%;
-            margin: 20px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-        }
-        #hot-info {
-            font-size: 24px;
-            font-style: italic;
-            margin: 50px;
-        }
-        .disclaimer {
-            font-size: 18px;
-            color: #333333;
-            margin-top: 60px;
-        }
-        @media (max-width: 768px) {
-            h1 { font-size: 38px; } /* Scales nicely on mobile */
-            .description { font-size: 20px; }
-            button { font-size: 24px; padding: 20px 50px; }
-            .ball { width: 80px; height: 80px; line-height: 80px; font-size: 32px; margin: 15px; }
-            #hot-info { font-size: 20px; }
-            .logo { max-width: 300px; }
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <!-- Official Lotto Texas logo centered above title -->
-        <img src="https://www.everythinglubbock.com/wp-content/uploads/sites/35/2021/08/Texas-Lottery-Logo-1280.jpg" alt="Official Lotto Texas Logo" class="logo">
-
-        <h1>Texas Lotto Smart Predictor</h1>
-        <p class="description">
-            Our advanced algorithm uses historical frequencies, patterns, and statistical models 
-            to generate smart number suggestions for Lotto Texas (6/54). 
-            Powered by official Texas Lottery data — your fun tool for better picks!
-        </p>
-        
-        <button onclick="generateNumbers()">Generate Prediction</button>
-        
-        <div id="numbers" class="numbers"></div>
-        
-        <p id="hot-info"></p>
-        
-        <p class="disclaimer">For entertainment purposes only. Lotteries are random — no guarantees.</p>
-    </div>
-
-    <script src="script.js"></script>
-
-    <!-- Random official Texas Lotto pick 6 drawing backgrounds -->
-    <script>
-        const backgrounds = [
-            'https://townsquare.media/site/36/files/2024/10/attachment-Lottery-Balls-Multicolor-Alex-Shuper-via-Unsplash.jpg?w=1200',
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Texas_Lottery_drawing.jpg/640px-Texas_Lottery_drawing.jpg',
-            'https://www.texasstandard.org/wp-content/uploads/2024/07/lottery_53057889829_o.jpg',
-            'https://media.khou.com/assets/KHOU/images/d609af6e-718f-44c4-95f4-08ded73c0ae3/d609af6e-718f-44c4-95f4-08ded73c0ae3_1920x1080.jpg',
-            'https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=886440116863175',
-            'https://media.cnn.com/api/v1/images/stellar/prod/190328170609-lottery-prep.jpg?q=x_131,y_2,h_941,w_1673,c_crop/w_1280'
-        ];
-        
-        const randomBg = backgrounds[Math.floor(Math.random() * backgrounds.length)];
-        document.body.style.backgroundImage = `url('${randomBg}')`;
-    </script>
-</body>
-</html>
+            margin: 30px auto;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 25px;
+            box-shadow: 0
