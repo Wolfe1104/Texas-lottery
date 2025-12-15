@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,7 +11,7 @@
             padding: 0;
         }
         body {
-            background: rgba(255, 255, 255, 0.5) fixed; /* 50% white fade */
+            background: rgba(255, 255, 255, 0.5) fixed; /* 50% white fade for good readability */
             background-size: cover;
             background-position: center center;
             background-repeat: no-repeat;
@@ -33,4 +33,67 @@
             padding: 40px;
             background: rgba(255, 255, 255, 0.85);
             border-radius: 25px;
-            box-shadow: 0
+            box-shadow: 0 6px 25px rgba(0,0,0,0.25);
+        }
+        .logo {
+            max-width: 450px;
+            width: 85%;
+            margin: 0 auto 50px auto;
+        }
+        h1 {
+            font-size: 58px;
+            color: #0047AB; /* Cobalt blue */
+            margin: 0 0 40px 0;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.2);
+            line-height: 1.2;
+        }
+        .description {
+            font-size: 28px;
+            line-height: 1.8;
+            margin: 0 auto 60px;
+            max-width: 95%;
+            font-weight: 500;
+        }
+        button {
+            padding: 30px 70px;
+            font-size: 32px;
+            background: #ffcc00;
+            color: black;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            margin-bottom: 60px;
+            font-weight: bold;
+        }
+        button:hover {
+            background: #ffd700;
+            transform: translateY(-2px);
+        }
+        .numbers {
+            margin: 70px auto;
+            min-height: 180px;
+        }
+        .ball {
+            display: inline-block;
+            width: 110px;
+            height: 110px;
+            line-height: 110px;
+            background: white;
+            color: #d32f2f;
+            font-size: 44px;
+            font-weight: bold;
+            border-radius: 50%;
+            margin: 22px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+        }
+        #hot-info {
+            font-size: 28px;
+            font-style: italic;
+            margin: 60px;
+            line-height: 1.6;
+        }
+        .disclaimer {
+            font-size: 20px;
+            color: #333333;
+            margin-top: 80
