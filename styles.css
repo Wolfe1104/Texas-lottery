@@ -1,7 +1,84 @@
- /* ... keep previous styles ... */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('https://i.ytimg.com/vi/JCnRa03ccEc/maxresdefault.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    min-height: 100vh;
+}
 
-#status {
-    margin: 20px;
+.container {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+}
+
+h1 {
+    font-size: 42px;
+    color: #0047AB; /* Cobalt blue */
+    text-shadow: 3px 3px 6px black;
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 20px;
+    line-height: 1.6;
+    margin: 0 auto 40px;
+    max-width: 90%;
+    text-shadow: 1px 1px 3px black;
+}
+
+button {
+    padding: 18px 40px;
+    font-size: 22px;
+    background: #ffcc00;
+    color: black;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    margin-bottom: 30px;
+}
+
+button:hover {
+    background: #ffd633;
+}
+
+.numbers {
+    margin: 50px auto;
+    min-height: 120px;
+}
+
+.ball {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    background: white;
+    color: #d32f2f; /* Classic red lottery number color */
+    font-size: 32px;
+    font-weight: bold;
+    border-radius: 50%;
+    margin: 15px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.6);
+    text-shadow: none;
+}
+
+#hot-info {
+    font-size: 18px;
     font-style: italic;
-    color: #003366;
+    margin: 30px;
+    text-shadow: 1px 1px 2px black;
+}
+
+.disclaimer {
+    font-size: 14px;
+    color: #ccc;
+    margin-top: 50px;
 }
