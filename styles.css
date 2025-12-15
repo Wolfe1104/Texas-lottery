@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                url('https://i.ytimg.com/vi/JCnRa03ccEc/maxresdefault.jpg') no-repeat center center fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), 
+                url('https://thumbs.dreamstime.com/b/raffle-drum-colorful-lottery-balls-close-up-shot-transparent-lottery-drawing-machine-filled-vibrant-colorful-395598915.jpg') no-repeat center center fixed;
     background-size: cover;
     color: white;
     text-align: center;
@@ -10,6 +10,7 @@ body {
     min-height: 100vh;
 }
 
+/* Rest of the CSS stays exactly the same */
 .container {
     max-width: 700px;
     margin: 40px auto;
