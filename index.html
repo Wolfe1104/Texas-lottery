@@ -11,7 +11,7 @@
             padding: 0;
         }
         body {
-            background: rgba(255, 255, 255, 0.5) fixed;
+            background: rgba(255, 255, 255, 0.5) fixed; /* 50% white fade on background */
             background-size: cover;
             background-position: center center;
             background-repeat: no-repeat;
@@ -31,7 +31,7 @@
             max-width: 90%;
             margin: 30px auto;
             padding: 40px;
-            background: rgba(255, 255, 255, 0.85);
+            background: rgba(255, 255, 255, 0.7); /* More see-through box */
             border-radius: 25px;
             box-shadow: 0 6px 25px rgba(0,0,0,0.25);
         }
@@ -113,8 +113,8 @@
 </head>
 <body>
     <div class="container">
-        <!-- Official high-res Lotto Texas logo -->
-        <img src="https://media.nbcdfw.com/2020/08/lotto-texas-logo.jpg?quality=85&strip=all" alt="Official Lotto Texas Logo" class="logo">
+        <!-- Official Lotto Texas logo -->
+        <img src="https://content.govdelivery.com/attachments/fancy_images/TXLOTTERY/2022/02/5571829/lotto-texas-extra-logo_original.jpg" alt="Official Lotto Texas Logo" class="logo">
 
         <h1>Texas Lotto Smart Predictor</h1>
         <p class="description">
@@ -135,15 +135,15 @@
 
     <script src="script.js"></script>
 
-    <!-- Reliable random official Texas Lotto pick 6 drawing backgrounds -->
+    <!-- Random official Texas Lotto pick 6 drawing backgrounds (reliable) -->
     <script>
         const backgrounds = [
-            'https://i.ytimg.com/vi/JCnRa03ccEc/maxresdefault.jpg', // Behind the scenes official drawing machine
-            'https://i.ytimg.com/vi/rbWJwD_bQfU/maxresdefault.jpg', // Night drawing machine
-            'https://files.sfchronicle.com/static-assets/compression-bot/1750482000_2117737-smaller.jpg', // Scandal timeline close-up machine
-            'https://townsquare.media/site/36/files/2025/01/attachment-Powerball-machine-4-Click-on-Detroit-Local-4-WDIV-via-YouTube.jpg?w=1200', // Drawing machine
-            'https://upload.wikimedia.org/wikipedia/commons/f/f7/Texas_Lottery_drawing.jpg', // Wikipedia official drawing photo
-            'https://townsquare.media/site/36/files/2025/07/attachment-lottery-balls-multicolor-alex-shuper-via-unsplash-1.JPG?w=1200' // Multicolor balls
+            'https://i.ytimg.com/vi/MnlzOE6oXmc/hq720.jpg',
+            'https://media.khou.com/assets/KHOU/images/d609af6e-718f-44c4-95f4-08ded73c0ae3/d609af6e-718f-44c4-95f4-08ded73c0ae3_1920x1080.jpg',
+            'https://i.ytimg.com/vi/Wmvh8gkY-QQ/hq720.jpg',
+            'https://i.ytimg.com/vi/C5rdvQHdwsA/hq720.jpg',
+            'https://townsquare.media/site/159/files/2021/08/attachment-RS34331_GettyImages-916223242-scr.jpg?w=780&q=75',
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Texas_Lottery_drawing.jpg/640px-Texas_Lottery_drawing.jpg'
         ];
         
         const randomBg = backgrounds[Math.floor(Math.random() * backgrounds.length)];
