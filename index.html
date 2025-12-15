@@ -11,7 +11,7 @@
             padding: 0;
         }
         body {
-            background: rgba(255, 255, 255, 0.5) fixed; /* 50% white fade for good readability */
+            background: rgba(255, 255, 255, 0.5) fixed; /* 50% white fade */
             background-size: cover;
             background-position: center center;
             background-repeat: no-repeat;
@@ -96,4 +96,58 @@
         .disclaimer {
             font-size: 20px;
             color: #333333;
-            margin-top: 80
+            margin-top: 80px;
+            line-height: 1.5;
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 42px; }
+            .description { font-size: 22px; }
+            button { font-size: 26px; padding: 25px 60px; }
+            .ball { width: 90px; height: 90px; line-height: 90px; font-size: 36px; margin: 18px; }
+            #hot-info { font-size: 22px; }
+            .disclaimer { font-size: 18px; }
+            .logo { max-width: 320px; }
+            .container { padding: 30px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Official Lotto Texas logo -->
+        <img src="https://content.govdelivery.com/attachments/fancy_images/TXLOTTERY/2022/02/5571829/lotto-texas-extra-logo_original.jpg" alt="Official Lotto Texas Logo" class="logo">
+
+        <h1>Texas Lotto Smart Predictor</h1>
+        <p class="description">
+            Our state-of-the-art experimental top-secret AI is fully integrated and powerful enough 
+            to predict the unpredictable. It analyzes historical frequencies, patterns, and advanced 
+            statistical models to generate smart number suggestions for Lotto Texas (6/54). 
+            Powered by official Texas Lottery data — your ultimate fun tool for smarter picks!
+        </p>
+        
+        <button onclick="generateNumbers()">Generate Prediction</button>
+        
+        <div id="numbers" class="numbers"></div>
+        
+        <p id="hot-info"></p>
+        
+        <p class="disclaimer">For entertainment purposes only. Lotteries are random — no guarantees.</p>
+    </div>
+
+    <script src="script.js"></script>
+
+    <!-- Proven reliable random Texas Lotto drawing backgrounds -->
+    <script>
+        const backgrounds = [
+            'https://i.ytimg.com/vi/JCnRa03ccEc/maxresdefault.jpg', // Behind the scenes official drawing (high-res)
+            'https://i.ytimg.com/vi/rbWJwD_bQfU/maxresdefault.jpg', // Night drawing machine
+            'https://i.ytimg.com/vi/Wmvh8gkY-QQ/maxresdefault.jpg', // Another official drawing thumbnail
+            'https://upload.wikimedia.org/wikipedia/commons/f/f7/Texas_Lottery_drawing.jpg', // Wikipedia official photo
+            'https://townsquare.media/site/36/files/2025/07/attachment-lottery-balls-multicolor-alex-shuper-via-unsplash-1.JPG', // Multicolor balls close-up
+            'https://www.kxan.com/wp-content/uploads/sites/40/2015/04/lottery-balls_37199033_ver1.0.jpg' // Balls being weighed
+        ];
+        
+        const randomBg = backgrounds[Math.floor(Math.random() * backgrounds.length)];
+        document.body.style.backgroundImage = `url('${randomBg}')`;
+    </script>
+</body>
+</html>
