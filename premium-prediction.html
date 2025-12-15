@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Premium Predictions - Texas Lotto Smart Predictor</title>
     <style>
-        /* Same style as other pages for consistency */
         html, body { height: 100%; margin: 0; padding: 0; }
         body {
             background: rgba(255, 255, 255, 0.3) fixed;
@@ -33,19 +32,22 @@
             box-shadow: 0 6px 25px rgba(0,0,0,0.25);
         }
         .texas-logo { max-width: 450px; width: 85%; margin: 0 auto 50px auto; }
-        h1 { font-size: 58px; color: #d4af37; margin: 0 0 40px 0; text-shadow: 3px 3px 6px rgba(0,0,0,0.3); line-height: 1.2; } /* Gold for premium feel */
+        h1 { font-size: 58px; color: #d4af37; margin: 0 0 40px 0; text-shadow: 3px 3px 6px rgba(0,0,0,0.3); line-height: 1.2; }
         .premium-explain { font-size: 28px; line-height: 1.8; margin: 0 auto 60px; max-width: 95%; font-weight: 500; text-shadow: 2px 2px 4px rgba(0,0,0,0.2); }
-        .numbers-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin: 60px auto; max-width: 95%; }
-        .set { background: rgba(255,255,255,0.9); padding: 20px; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.2); }
-        .set-title { font-size: 24px; font-weight: bold; margin-bottom: 20px; color: #d4af37; }
-        .balls { display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; }
-        .ball { width: 80px; height: 80px; line-height: 80px; background: white; color: #d32f2f; font-size: 36px; font-weight: bold; border-radius: 50%; box-shadow: 0 6px 15px rgba(0,0,0,0.3); }
+        .sets-table { width: 100%; max-width: 1000px; margin: 0 auto; border-collapse: separate; border-spacing: 20px; }
+        .set-row { background: rgba(255,255,255,0.9); border-radius: 20px; padding: 25px; box-shadow: 0 6px 20px rgba(0,0,0,0.2); }
+        .set-title { font-size: 28px; font-weight: bold; margin-bottom: 20px; color: #d4af37; }
+        .balls { display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; }
+        .ball { width: 90px; height: 90px; line-height: 90px; background: white; color: #d32f2f; font-size: 38px; font-weight: bold; border-radius: 50%; box-shadow: 0 8px 20px rgba(0,0,0,0.4); }
         .disclaimer { font-size: 20px; color: #333333; margin-top: 80px; line-height: 1.5; }
         @media (max-width: 768px) {
             h1 { font-size: 42px; }
             .premium-explain { font-size: 22px; }
+            .set-title { font-size: 24px; }
             .ball { width: 70px; height: 70px; line-height: 70px; font-size: 30px; }
             .texas-logo { max-width: 320px; }
+            .set-row { padding: 20px; }
+            .balls { gap: 15px; }
         }
     </style>
 </head>
@@ -60,7 +62,7 @@
             Below are your Top 10 optimized combinations, generated using advanced frequency analysis, pattern recognition, and predictive modeling for maximum potential.
         </p>
 
-        <div class="numbers-grid" id="premiumSets"></div>
+        <table class="sets-table" id="premiumTable"></table>
 
         <p class="disclaimer">For entertainment purposes only. Lotteries are random — no guarantees. Enjoy your premium access!</p>
     </div>
@@ -79,15 +81,15 @@
         document.body.style.backgroundImage = `url('${randomBg}')`;
     </script>
 
-    <!-- Generate 10 "advanced" sets (with hot weighting - your premium algorithm) -->
+    <!-- Generate 10 rows, each with 6 balls -->
     <script>
-        const hotNumbers = [4, 8, 26, 31, 38, 39, 49, 15, 19, 27]; // Current real hot from texaslottery.com
+        const hotNumbers = [4, 8, 26, 31, 38, 39, 49, 15, 19, 27]; // Current hot numbers
 
-        function generatePremiumSet() {
+        function generateSet() {
             const numbers = new Set();
             while (numbers.size < 6) {
                 let num;
-                if (Math.random() < 0.7) { // 70% hot bias for "advanced"
+                if (Math.random() < 0.7) { // Strong hot bias for premium
                     num = hotNumbers[Math.floor(Math.random() * hotNumbers.length)];
                 } else {
                     num = Math.floor(Math.random() * 54) + 1;
@@ -97,14 +99,19 @@
             return Array.from(numbers).sort((a, b) => a - b);
         }
 
-        const grid = document.getElementById('premiumSets');
+        const table = document.getElementById('premiumTable');
         for (let i = 1; i <= 10; i++) {
-            const setDiv = document.createElement('div');
-            setDiv.className = 'set';
-            setDiv.innerHTML = `<div class="set-title">Elite Set #\( {i}</div><div class="balls" id="balls \){i}"></div>`;
-            grid.appendChild(setDiv);
+            const row = document.createElement('tr');
+            row.className = 'set-row';
+            row.innerHTML = `
+                <td>
+                    <div class="set-title">Elite Set #${i}</div>
+                    <div class="balls" id="balls${i}"></div>
+                </td>
+            `;
+            table.appendChild(row);
 
-            const nums = generatePremiumSet();
+            const nums = generateSet();
             const ballsDiv = document.getElementById(`balls${i}`);
             nums.forEach(n => {
                 const ball = document.createElement('div');
