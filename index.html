@@ -29,12 +29,22 @@
     <!-- Your main prediction logic -->
     <script src="script.js"></script>
 
-    <!-- Random light/white background selector -->
+    <!-- Fixed random light/white lottery balls background -->
     <script>
         const backgrounds = [
-            'https://thumbs.dreamstime.com/b/lottery-machine-balls-inside-lotto-bingo-game-luck-concept-d-illustration-white-no-shadow-176226664.jpg',
-            'https://thumbs.dreamstime.com/b/vector-bingo-lottery-number-balls-red-d-isolated-white-background-120719786.jpg',
             'https://thumbs.dreamstime.com/b/colorful-d-bingo-lottery-number-balls-isolated-white-background-vector-bingo-lottery-number-balls-120719829.jpg',
-            'https://thumbs.dreamstime.com/b/white-ball-numbers-background-vector-bingo-lottery-number-balls-to-set-isolated-120207453.jpg',
-            'https://thumbs.dreamstime.com/b/colorful-bingo-balls-numbers-scattered-plain-background-fun-setting-brightly-colored-capturing-excitement-405597569.jpg',
-            'https://media.istockphoto.com/id/172133562/photo/flying-bingo-balls-with-assorted-numbers-in-white-background.jpg?s=612x612&w
+            'https://thumbs.dreamstime.com/b/vector-bingo-lottery-number-balls-colorful-purple-holographic-d-isolated-white-background-120719812.jpg',
+            'https://thumbs.dreamstime.com/b/d-image-white-bingo-balls-against-background-390937906.jpg',
+            'https://img.freepik.com/free-psd/realistic-lottery-symbol-isolated_23-2151177259.jpg',
+            'https://thumbs.dreamstime.com/b/lottery-machine-balls-inside-lotto-bingo-game-luck-concept-d-illustration-white-no-shadow-176021866.jpg',
+            'https://previews.123rf.com/images/seamartini/seamartini2304/seamartini230400077/201576363-bingo-balls-isolated-3d-vector-lottery-lotto-or-keno-gambling-games-colourful-spheres-with-lucky.jpg'
+        ];
+        
+        const randomBg = backgrounds[Math.floor(Math.random() * backgrounds.length)];
+        document.body.style.backgroundImage = `url('${randomBg}')`;
+        document.body.style.backgroundSize = 'cover';
+        document.body.style.backgroundPosition = 'center';
+        document.body.style.backgroundRepeat = 'no-repeat';
+    </script>
+</body>
+</html>
