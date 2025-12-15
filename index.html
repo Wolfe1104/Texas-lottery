@@ -11,7 +11,7 @@
             padding: 0;
         }
         body {
-            background: rgba(255, 255, 255, 0.5) fixed; /* 50% white fade on background */
+            background: rgba(255, 255, 255, 0.3) fixed; /* Much less white fade - background more visible */
             background-size: cover;
             background-position: center center;
             background-repeat: no-repeat;
@@ -31,7 +31,7 @@
             max-width: 90%;
             margin: 30px auto;
             padding: 40px;
-            background: rgba(255, 255, 255, 0.7); /* More see-through box */
+            background: rgba(255, 255, 255, 0.6); /* More see-through box */
             border-radius: 25px;
             box-shadow: 0 6px 25px rgba(0,0,0,0.25);
         }
@@ -44,7 +44,7 @@
             font-size: 58px;
             color: #0047AB;
             margin: 0 0 40px 0;
-            text-shadow: 3px 3px 6px rgba(0,0,0,0.2);
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.3); /* Stronger shadow for readability */
             line-height: 1.2;
         }
         .description {
@@ -53,6 +53,7 @@
             margin: 0 auto 60px;
             max-width: 95%;
             font-weight: 500;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
         }
         button {
             padding: 30px 70px;
@@ -92,12 +93,14 @@
             font-style: italic;
             margin: 60px;
             line-height: 1.6;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
         }
         .disclaimer {
             font-size: 20px;
             color: #333333;
             margin-top: 80px;
             line-height: 1.5;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
         }
         @media (max-width: 768px) {
             h1 { font-size: 42px; }
@@ -135,15 +138,15 @@
 
     <script src="script.js"></script>
 
-    <!-- Random official Texas Lotto pick 6 drawing backgrounds (reliable) -->
+    <!-- Updated reliable backgrounds - now more visible with less fade -->
     <script>
         const backgrounds = [
             'https://i.ytimg.com/vi/MnlzOE6oXmc/hq720.jpg',
             'https://media.khou.com/assets/KHOU/images/d609af6e-718f-44c4-95f4-08ded73c0ae3/d609af6e-718f-44c4-95f4-08ded73c0ae3_1920x1080.jpg',
-            'https://i.ytimg.com/vi/Wmvh8gkY-QQ/hq720.jpg',
             'https://i.ytimg.com/vi/C5rdvQHdwsA/hq720.jpg',
-            'https://townsquare.media/site/159/files/2021/08/attachment-RS34331_GettyImages-916223242-scr.jpg?w=780&q=75',
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Texas_Lottery_drawing.jpg/640px-Texas_Lottery_drawing.jpg'
+            'https://townsquare.media/site/159/files/2021/08/attachment-RS34331_GettyImages-916223242-scr.jpg',
+            'https://i.ytimg.com/vi/LqyIzY2nWrA/hq720.jpg',
+            'https://townsquare.media/site/36/files/2025/01/attachment-Powerball-machine-4-Click-on-Detroit-Local-4-WDIV-via-YouTube.jpg'
         ];
         
         const randomBg = backgrounds[Math.floor(Math.random() * backgrounds.length)];
