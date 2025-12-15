@@ -1,7 +1,17 @@
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), 
-                url('https://thumbs.dreamstime.com/b/raffle-drum-colorful-lottery-balls-close-up-shot-transparent-lottery-drawing-machine-filled-vibrant-colorful-395598915.jpg') no-repeat center center fixed;
+    /* Primary: Dynamic swirling colorful balls in clear cylindrical drum */
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url('https://img.freepik.com/premium-photo/portrait-swirling-lottery-balls-lottery-drum_1234220-60274.jpg') no-repeat center center fixed;
+    
+    /* Fallback 1: Vibrant balls in motion inside transparent machine */
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url('https://thumbs.dreamstime.com/b/colourful-lottery-balls-machine-bingo-sphere-motion-gambling-euqipment-blurred-93237066.jpg') no-repeat center center fixed;
+    
+    /* Fallback 2: Close-up orange/red balls in clear drum */
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url('https://thumbs.dreamstime.com/b/dynamic-close-up-vibrant-orange-numbered-lottery-balls-motion-inside-clear-cylindrical-drawing-machine-set-against-419577012.jpg') no-repeat center center fixed;
+    
     background-size: cover;
     color: white;
     text-align: center;
@@ -10,7 +20,7 @@ body {
     min-height: 100vh;
 }
 
-/* Rest of the CSS stays exactly the same */
+/* Rest unchanged */
 .container {
     max-width: 700px;
     margin: 40px auto;
@@ -62,13 +72,12 @@ button:hover {
     height: 80px;
     line-height: 80px;
     background: white;
-    color: #d32f2f; /* Classic red lottery number color */
+    color: #d32f2f;
     font-size: 32px;
     font-weight: bold;
     border-radius: 50%;
     margin: 15px;
     box-shadow: 0 6px 12px rgba(0,0,0,0.6);
-    text-shadow: none;
 }
 
 #hot-info {
