@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Texas Lotto Systematic Winning Prediction</title>
-    <link rel="stylesheet" href="style.css">
     <style>
         html, body {
             height: 100%;
@@ -12,16 +11,17 @@
             padding: 0;
         }
         body {
-            background: rgba(255, 255, 255, 0.75) fixed; /* 75% white fade overlay */
+            background: rgba(255, 255, 255, 0.75) fixed; /* 75% white fade for soft look */
             background-size: cover;
             background-position: center center;
             background-repeat: no-repeat;
-            background-attachment: fixed; /* Ensures full coverage on all devices */
+            background-attachment: fixed;
             color: #000000;
             text-align: center;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
+            font-family: Arial, sans-serif;
         }
         .container {
             flex: 1;
@@ -30,16 +30,70 @@
             justify-content: center;
             max-width: 90%;
             margin: 20px auto;
-            padding: 20px;
+            padding: 30px;
             background: rgba(255, 255, 255, 0.8);
-            border-radius: 15px;
+            border-radius: 20px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.2);
         }
-        @media (min-width: 768px) {
-            .container {
-                max-width: 700px;
-                padding: 40px;
-            }
+        h1 {
+            font-size: 52px; /* Much bigger */
+            color: #0047AB; /* Cobalt blue */
+            margin: 0 0 30px 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        .description {
+            font-size: 24px; /* Bigger */
+            line-height: 1.6;
+            margin: 0 auto 50px;
+            max-width: 95%;
+        }
+        button {
+            padding: 25px 60px; /* Larger touch area */
+            font-size: 28px; /* Bigger text */
+            background: #ffcc00;
+            color: black;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+            margin-bottom: 50px;
+        }
+        button:hover {
+            background: #ffd700;
+        }
+        .numbers {
+            margin: 60px auto;
+            min-height: 160px;
+        }
+        .ball {
+            display: inline-block;
+            width: 100px; /* Bigger balls */
+            height: 100px;
+            line-height: 100px;
+            background: white;
+            color: #d32f2f;
+            font-size: 40px; /* Bigger numbers */
+            font-weight: bold;
+            border-radius: 50%;
+            margin: 20px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+        #hot-info {
+            font-size: 24px; /* Bigger */
+            font-style: italic;
+            margin: 50px;
+        }
+        .disclaimer {
+            font-size: 18px; /* Bigger */
+            color: #333333;
+            margin-top: 60px;
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 40px; }
+            .description { font-size: 20px; }
+            button { font-size: 24px; padding: 20px 50px; }
+            .ball { width: 80px; height: 80px; line-height: 80px; font-size: 32px; margin: 15px; }
+            #hot-info { font-size: 20px; }
         }
     </style>
 </head>
@@ -65,15 +119,15 @@
 
     <script src="script.js"></script>
 
-    <!-- Random light/white subtle lottery balls background -->
+    <!-- Random light subtle lottery balls background (reliable URLs) -->
     <script>
         const backgrounds = [
-            'https://thumbs.dreamstime.com/b/lucky-bingo-balls-arranged-pyramid-shape-number-top-isolated-white-background-collection-colorful-410266291.jpg',
+            'https://media.istockphoto.com/id/1354036187/vector/realistic-detailed-3d-falling-lotto-ball-background-vector.jpg?s=612x612&w=0&k=20&c=MZNozDpL0fqaVeCEoQAHDBTLjeb-OXytumNy0A3OUoc=',
             'https://thumbs.dreamstime.com/b/lottery-balls-number-abstract-background-lotto-game-307166295.jpg',
             'https://img.freepik.com/free-psd/realistic-lottery-symbol-isolated_23-2151177259.jpg',
-            'https://media.istockphoto.com/id/1354036187/vector/realistic-detailed-3d-falling-lotto-ball-background-vector.jpg?s=612x612&w=0&k=20&c=MZNozDpL0fqaVeCEoQAHDBTLjeb-OXytumNy0A3OUoc=',
-            'https://thumbs.dreamstime.com/b/bingo-balls-assortment-used-isolated-white-background-88170936.jpg',
-            'https://thumbs.dreamstime.com/b/vector-bingo-balls-isolated-white-background-vector-bingo-balls-isolated-white-background-212750194.jpg'
+            'https://thumbs.dreamstime.com/b/colorful-d-bingo-lottery-number-balls-isolated-white-background-vector-bingo-lottery-number-balls-120719829.jpg',
+            'https://thumbs.dreamstime.com/b/lucky-bingo-balls-arranged-pyramid-shape-number-top-isolated-white-background-collection-colorful-410266291.jpg',
+            'https://thumbs.dreamstime.com/b/d-image-white-bingo-balls-against-background-390937906.jpg'
         ];
         
         const randomBg = backgrounds[Math.floor(Math.random() * backgrounds.length)];
