@@ -1,0 +1,89 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium - Texas Lotto Smart Predictor</title>
+    <style>
+        html, body { height: 100%; margin: 0; padding: 0; }
+        body {
+            background: rgba(255, 255, 255, 0.3) fixed;
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #000000;
+            text-align: center;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            max-width: 90%;
+            margin: 30px auto;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 25px;
+            box-shadow: 0 6px 25px rgba(0,0,0,0.25);
+        }
+        .texas-logo { max-width: 450px; width: 85%; margin: 0 auto 50px auto; }
+        h1 { font-size: 58px; color: #0047AB; margin: 0 0 40px 0; text-shadow: 3px 3px 6px rgba(0,0,0,0.3); line-height: 1.2; }
+        .premium-text { font-size: 28px; line-height: 1.8; margin: 0 auto 60px; max-width: 95%; font-weight: 500; text-shadow: 2px 2px 4px rgba(0,0,0,0.2); }
+        .price { font-size: 36px; font-weight: bold; color: #d4af37; margin: 40px 0; }
+        .buttons { margin: 60px 0; }
+        button { padding: 30px 70px; font-size: 32px; background: #ffcc00; color: black; border: none; border-radius: 20px; cursor: pointer; box-shadow: 0 8px 20px rgba(0,0,0,0.3); margin: 20px; font-weight: bold; min-width: 300px; }
+        button:hover { background: #ffd700; transform: translateY(-2px); }
+        .go-premium-btn { background: #d4af37; }
+        .go-premium-btn:hover { background: #e6c04e; }
+        .disclaimer { font-size: 20px; color: #333333; margin-top: 40px; line-height: 1.5; text-shadow: 1px 1px 3px rgba(0,0,0,0.1); }
+        @media (max-width: 768px) {
+            h1 { font-size: 42px; }
+            .premium-text { font-size: 22px; }
+            .price { font-size: 30px; }
+            button { font-size: 26px; padding: 25px 60px; min-width: 250px; margin: 15px; }
+            .texas-logo { max-width: 320px; }
+            .container { padding: 30px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://content.govdelivery.com/attachments/fancy_images/TXLOTTERY/2022/02/5571829/lotto-texas-extra-logo_original.jpg" alt="Official Lotto Texas Logo" class="texas-logo">
+
+        <h1>Go Premium – Unlock the Full Power</h1>
+
+        <p class="premium-text">
+            Upgrade to Premium and gain access to our state-of-the-art, systematically tested algorithm with proven results from extensive back-testing on historical Texas Lottery data.<br><br>
+            This exclusive experimental AI goes far beyond the basic version — delivering the top 10 optimized number combinations designed to maximize your chances through advanced pattern recognition, frequency analysis, and predictive modeling.<br><br>
+            Users of the premium system have seen dramatically improved outcomes in simulations. For only <span class="price">$4.99</span> (one-time unlock), you get unlimited access to the most powerful lotto tool available.
+        </p>
+
+        <div class="buttons">
+            <button class="go-premium-btn" onclick="alert('Premium payment coming soon!')">GO PREMIUM – $4.99</button>
+            <button onclick="window.location.href='free-prediction.html'">Try for Free</button>
+        </div>
+
+        <p class="disclaimer">For entertainment purposes only. Lotteries are random — no guarantees. Premium features enhance analysis but do not guarantee wins.</p>
+    </div>
+
+    <!-- Same background script -->
+    <script>
+        const backgrounds = [
+            'https://i.ytimg.com/vi/MnlzOE6oXmc/hq720.jpg',
+            'https://i.ytimg.com/vi/Wmvh8gkY-QQ/hq720.jpg',
+            'https://i.ytimg.com/vi/C5rdvQHdwsA/hq720.jpg',
+            'https://townsquare.media/site/159/files/2021/08/attachment-RS34331_GettyImages-916223242-scr.jpg',
+            'https://media.khou.com/assets/KHOU/images/d609af6e-718f-44c4-95f4-08ded73c0ae3/d609af6e-718f-44c4-95f4-08ded73c0ae3_1920x1080.jpg',
+            'https://upload.wikimedia.org/wikipedia/commons/f/f7/Texas_Lottery_drawing.jpg'
+        ];
+        
+        const randomBg = backgrounds[Math.floor(Math.random() * backgrounds.length)];
+        document.body.style.backgroundImage = `url('${randomBg}')`;
+    </script>
+</body>
+</html>
