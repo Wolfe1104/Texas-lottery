@@ -62,7 +62,7 @@ button:hover {
     height: 80px;
     line-height: 80px;
     background: white;
-    color: #d32f2f; /* Classic red lottery number color */
+    color: #d32f2f;
     font-size: 32px;
     font-weight: bold;
     border-radius: 50%;
@@ -82,18 +82,3 @@ button:hover {
     color: #ccc;
     margin-top: 50px;
 }
-
-/* Random background script - runs once on load */
-<script>
-    const backgrounds = [
-        'https://thumbs.dreamstime.com/b/lottery-machine-colorful-balls-close-up-transparent-filled-numbered-several-being-drawn-clear-tube-ready-399464789.jpg',
-        'https://thumbs.dreamstime.com/b/raffle-drum-colorful-lottery-balls-close-up-shot-transparent-lottery-drawing-machine-filled-vibrant-colorful-395598915.jpg',
-        'https://c8.alamy.com/comp/HRRKH7/colourful-lottery-balls-in-a-bingo-machine-lottery-balls-in-a-sphere-HRRKH7.jpg',
-        'https://c8.alamy.com/comp/KCX1DE/colourful-lottery-balls-in-a-bingo-machine-gambling-machine-and-euqipment-KCX1DE.jpg',
-        'https://thumbs.dreamstime.com/b/colorful-bingo-balls-falling-clear-glass-bowl-confetti-background-bright-numbers-transparent-surrounded-400452970.jpg',
-        'https://t4.ftcdn.net/jpg/09/28/82/35/360_F_928823568_luPl0HATWUJXZgvP2KO56S441JIXBTe4.jpg'
-    ];
-    
-    const randomBg = backgrounds[Math.floor(Math.random() * backgrounds.length)];
-    document.body.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('${randomBg}')`;
-</script>
