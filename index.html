@@ -11,7 +11,7 @@
             padding: 0;
         }
         body {
-            background: rgba(255, 255, 255, 0.75) fixed; /* 75% white fade for soft look */
+            background: rgba(255, 255, 255, 0.5) fixed; /* Less translucency - 50% white fade */
             background-size: cover;
             background-position: center center;
             background-repeat: no-repeat;
@@ -35,21 +35,29 @@
             border-radius: 20px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.2);
         }
+        .logo {
+            max-width: 400px;
+            width: 80%;
+            margin: 0 auto 40px auto;
+        }
         h1 {
-            font-size: 52px; /* Much bigger */
+            font-size: 52px;
             color: #0047AB; /* Cobalt blue */
             margin: 0 0 30px 0;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
         .description {
-            font-size: 24px; /* Bigger */
+            font-size: 24px;
             line-height: 1.6;
             margin: 0 auto 50px;
             max-width: 95%;
         }
         button {
-            padding: 25px 60px; /* Larger touch area */
-            font-size: 28px; /* Bigger text */
+            padding: 25px 60px;
+            font-size: 28px;
             background: #ffcc00;
             color: black;
             border: none;
@@ -67,38 +75,42 @@
         }
         .ball {
             display: inline-block;
-            width: 100px; /* Bigger balls */
+            width: 100px;
             height: 100px;
             line-height: 100px;
             background: white;
             color: #d32f2f;
-            font-size: 40px; /* Bigger numbers */
+            font-size: 40px;
             font-weight: bold;
             border-radius: 50%;
             margin: 20px;
             box-shadow: 0 8px 20px rgba(0,0,0,0.3);
         }
         #hot-info {
-            font-size: 24px; /* Bigger */
+            font-size: 24px;
             font-style: italic;
             margin: 50px;
         }
         .disclaimer {
-            font-size: 18px; /* Bigger */
+            font-size: 18px;
             color: #333333;
             margin-top: 60px;
         }
         @media (max-width: 768px) {
-            h1 { font-size: 40px; }
+            h1 { font-size: 36px; }
             .description { font-size: 20px; }
             button { font-size: 24px; padding: 20px 50px; }
             .ball { width: 80px; height: 80px; line-height: 80px; font-size: 32px; margin: 15px; }
             #hot-info { font-size: 20px; }
+            .logo { max-width: 300px; }
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <!-- Official Lotto Texas logo centered above title -->
+        <img src="https://media.nbcdfw.com/2020/08/lotto-texas-logo.jpg?quality=85&strip=all" alt="Official Lotto Texas Logo" class="logo">
+
         <h1>Texas Lotto Systematic Winning Prediction</h1>
         <p class="description">
             Our state-of-the-art unreleased algorithm analyzes every possible combination, 
@@ -119,15 +131,15 @@
 
     <script src="script.js"></script>
 
-    <!-- Random light subtle lottery balls background (reliable URLs) -->
+    <!-- Random official-style Texas Lotto pick 6 drawing backgrounds (less fade) -->
     <script>
         const backgrounds = [
-            'https://media.istockphoto.com/id/1354036187/vector/realistic-detailed-3d-falling-lotto-ball-background-vector.jpg?s=612x612&w=0&k=20&c=MZNozDpL0fqaVeCEoQAHDBTLjeb-OXytumNy0A3OUoc=',
-            'https://thumbs.dreamstime.com/b/lottery-balls-number-abstract-background-lotto-game-307166295.jpg',
-            'https://img.freepik.com/free-psd/realistic-lottery-symbol-isolated_23-2151177259.jpg',
-            'https://thumbs.dreamstime.com/b/colorful-d-bingo-lottery-number-balls-isolated-white-background-vector-bingo-lottery-number-balls-120719829.jpg',
-            'https://thumbs.dreamstime.com/b/lucky-bingo-balls-arranged-pyramid-shape-number-top-isolated-white-background-collection-colorful-410266291.jpg',
-            'https://thumbs.dreamstime.com/b/d-image-white-bingo-balls-against-background-390937906.jpg'
+            'https://townsquare.media/site/36/files/2024/10/attachment-Lottery-Balls-Multicolor-Alex-Shuper-via-Unsplash.jpg?w=1200',
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Texas_Lottery_drawing.jpg/640px-Texas_Lottery_drawing.jpg',
+            'https://www.texasstandard.org/wp-content/uploads/2024/07/lottery_53057889829_o.jpg',
+            'https://media.khou.com/assets/KHOU/images/d609af6e-718f-44c4-95f4-08ded73c0ae3/d609af6e-718f-44c4-95f4-08ded73c0ae3_1920x1080.jpg',
+            'https://townsquare.media/site/36/files/2025/07/attachment-lottery-balls-multicolor-alex-shuper-via-unsplash-1.JPG?w=1200',
+            'https://www.kxan.com/wp-content/uploads/sites/40/2015/04/lottery-balls_37199033_ver1.0.jpg?w=1280'
         ];
         
         const randomBg = backgrounds[Math.floor(Math.random() * backgrounds.length)];
