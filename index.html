@@ -5,6 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Texas Lotto Systematic Winning Prediction</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background: rgba(255, 255, 255, 0.75) fixed; /* 75% white fade overlay */
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed; /* Ensures full coverage on all devices */
+            color: #000000;
+            text-align: center;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            max-width: 90%;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+        @media (min-width: 768px) {
+            .container {
+                max-width: 700px;
+                padding: 40px;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -26,25 +63,21 @@
         <p class="disclaimer">For entertainment purposes only. Lotteries are random — no guarantees.</p>
     </div>
 
-    <!-- Your main prediction logic -->
     <script src="script.js"></script>
 
-    <!-- Fixed random light/white lottery balls background -->
+    <!-- Random light/white subtle lottery balls background -->
     <script>
         const backgrounds = [
-            'https://thumbs.dreamstime.com/b/colorful-d-bingo-lottery-number-balls-isolated-white-background-vector-bingo-lottery-number-balls-120719829.jpg',
-            'https://thumbs.dreamstime.com/b/vector-bingo-lottery-number-balls-colorful-purple-holographic-d-isolated-white-background-120719812.jpg',
-            'https://thumbs.dreamstime.com/b/d-image-white-bingo-balls-against-background-390937906.jpg',
+            'https://thumbs.dreamstime.com/b/lucky-bingo-balls-arranged-pyramid-shape-number-top-isolated-white-background-collection-colorful-410266291.jpg',
+            'https://thumbs.dreamstime.com/b/lottery-balls-number-abstract-background-lotto-game-307166295.jpg',
             'https://img.freepik.com/free-psd/realistic-lottery-symbol-isolated_23-2151177259.jpg',
-            'https://thumbs.dreamstime.com/b/lottery-machine-balls-inside-lotto-bingo-game-luck-concept-d-illustration-white-no-shadow-176021866.jpg',
-            'https://previews.123rf.com/images/seamartini/seamartini2304/seamartini230400077/201576363-bingo-balls-isolated-3d-vector-lottery-lotto-or-keno-gambling-games-colourful-spheres-with-lucky.jpg'
+            'https://media.istockphoto.com/id/1354036187/vector/realistic-detailed-3d-falling-lotto-ball-background-vector.jpg?s=612x612&w=0&k=20&c=MZNozDpL0fqaVeCEoQAHDBTLjeb-OXytumNy0A3OUoc=',
+            'https://thumbs.dreamstime.com/b/bingo-balls-assortment-used-isolated-white-background-88170936.jpg',
+            'https://thumbs.dreamstime.com/b/vector-bingo-balls-isolated-white-background-vector-bingo-balls-isolated-white-background-212750194.jpg'
         ];
         
         const randomBg = backgrounds[Math.floor(Math.random() * backgrounds.length)];
         document.body.style.backgroundImage = `url('${randomBg}')`;
-        document.body.style.backgroundSize = 'cover';
-        document.body.style.backgroundPosition = 'center';
-        document.body.style.backgroundRepeat = 'no-repeat';
     </script>
 </body>
 </html>
