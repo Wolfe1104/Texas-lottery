@@ -45,60 +45,17 @@
             .container { padding: 30px; }
         }
 
-        /* Improved Modal - centered, 4/5 width, ~2/5 height */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.7);
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-            box-sizing: border-box;
-        }
-        .modal-content {
-            background: white;
-            padding: 40px;
-            border-radius: 25px;
-            width: 80%; /* 4/5 of page */
-            max-width: 900px;
-            max-height: 80vh; /* Limits height */
-            overflow-y: auto;
-            text-align: center;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
-        }
-        .modal-content h2 {
-            font-size: 36px;
-            color: #0047AB;
-            margin-bottom: 30px;
-        }
-        .modal-content p {
-            font-size: 24px;
-            line-height: 1.7;
-            margin-bottom: 40px;
-        }
-        .modal-buttons button {
-            padding: 18px 40px;
-            font-size: 24px;
-            margin: 10px;
-            border: none;
-            border-radius: 15px;
-            cursor: pointer;
-            min-width: 200px;
-        }
+        /* Responsive Modal - 80% width, centered, ~40% height feel */
+        .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.7); justify-content: center; align-items: center; padding: 20px; box-sizing: border-box; }
+        .modal-content { background: white; padding: 40px; border-radius: 25px; width: 80%; max-width: 900px; max-height: 80vh; overflow-y: auto; text-align: center; box-shadow: 0 10px 40px rgba(0,0,0,0.5); }
+        .modal-content h2 { font-size: 36px; color: #0047AB; margin-bottom: 30px; }
+        .modal-content p { font-size: 24px; line-height: 1.7; margin-bottom: 40px; }
+        .modal-buttons button { padding: 18px 40px; font-size: 24px; margin: 10px; border: none; border-radius: 15px; cursor: pointer; min-width: 200px; }
         .premium-btn { background: #ffcc00; color: black; font-weight: bold; }
         .proceed-btn { background: #4CAF50; color: white; }
         .cancel-btn { background: #f44336; color: white; }
-
         @media (max-width: 768px) {
-            .modal-content {
-                width: 90%;
-                padding: 30px;
-            }
+            .modal-content { width: 90%; padding: 30px; }
             .modal-content h2 { font-size: 30px; }
             .modal-content p { font-size: 20px; }
             .modal-buttons button { font-size: 20px; padding: 15px 30px; min-width: 150px; display: block; width: 80%; margin: 15px auto; }
@@ -107,7 +64,8 @@
 </head>
 <body>
     <div class="container">
-        <img src="https://content.govdelivery.com/attachments/fancy_images/TXLOTTERY/2022/02/5571829/lotto-texas-extra-logo_original.jpg" alt="Official Lotto Texas Logo" class="logo">
+        <!-- Official high-res Lotto Texas logo (reliable) -->
+        <img src="https://kfoxtv.com/resources/media/fa2dded0-a4b3-428b-bac0-956a3187d602-large16x9_LottoTexas.png?1598303615164" alt="Official Lotto Texas Logo" class="logo">
 
         <h1>Texas Lotto Smart Predictor</h1>
         <p class="description">
@@ -122,7 +80,7 @@
         <p class="disclaimer">For entertainment purposes only. Lotteries are random — no guarantees.</p>
     </div>
 
-    <!-- Improved Responsive Modal -->
+    <!-- Responsive Modal -->
     <div id="freeModal" class="modal">
         <div class="modal-content">
             <h2>Try Texas Lotto Smart Predictor for Free</h2>
@@ -141,21 +99,22 @@
 
     <script src="script.js"></script>
 
-    <!-- Random background -->
+    <!-- Reliable random Texas Lotto drawing backgrounds -->
     <script>
         const backgrounds = [
-            'https://i.ytimg.com/vi/JCnRa03ccEc/maxresdefault.jpg',
-            'https://i.ytimg.com/vi/rbWJwD_bQfU/maxresdefault.jpg',
-            'https://i.ytimg.com/vi/Wmvh8gkY-QQ/maxresdefault.jpg',
-            'https://upload.wikimedia.org/wikipedia/commons/f/f7/Texas_Lottery_drawing.jpg',
+            'https://i.ytimg.com/vi/Wmvh8gkY-QQ/hq720.jpg',
+            'https://i.ytimg.com/vi/MnlzOE6oXmc/hq720.jpg',
             'https://townsquare.media/site/159/files/2021/08/attachment-RS34331_GettyImages-916223242-scr.jpg',
-            'https://media.khou.com/assets/KHOU/images/d609af6e-718f-44c4-95f4-08ded73c0ae3/d609af6e-718f-44c4-95f4-08ded73c0ae3_1920x1080.jpg'
+            'https://s.yimg.com/ny/api/res/1.2/LxvfPuEeFMdw6sB.4miLvg--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyNDI7aD04Mjg7Y2Y9d2VicA--/https://media.zenfs.com/en/the-el-paso-times/6f95cc3ffe16b51f1df30f08ee9ff15b',
+            'https://media.nbcdfw.com/2023/10/powerball-texas-GettyImages-1576473824-copy.jpg',
+            'https://dims.apnews.com/dims4/default/b914590/2147483647/strip/true/crop/5259x3506+0+0/resize/599x399!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2Fb3%2F52%2F00926574b91a91fc8d0051a35d0c%2Fc3ceeb71752c41ce94e0aac8aea3bbd6'
         ];
+        
         const randomBg = backgrounds[Math.floor(Math.random() * backgrounds.length)];
         document.body.style.backgroundImage = `url('${randomBg}')`;
     </script>
 
-    <!-- Open modal on button click -->
+    <!-- Modal trigger -->
     <script>
         document.getElementById('tryFreeBtn').onclick = function() {
             document.getElementById('freeModal').style.display = 'flex';
