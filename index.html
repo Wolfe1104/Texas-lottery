@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Texas Lotto Systematic Winning Prediction</title>
+    <title>Texas Lotto Smart Predictor</title>
     <style>
         html, body {
             height: 100%;
@@ -11,7 +11,7 @@
             padding: 0;
         }
         body {
-            background: rgba(255, 255, 255, 0.5) fixed; /* Less translucency - 50% white fade */
+            background: rgba(255, 255, 255, 0.5) fixed; /* 50% white fade - less translucency */
             background-size: cover;
             background-position: center center;
             background-repeat: no-repeat;
@@ -45,9 +45,6 @@
             color: #0047AB; /* Cobalt blue */
             margin: 0 0 30px 0;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
         }
         .description {
             font-size: 24px;
@@ -97,7 +94,7 @@
             margin-top: 60px;
         }
         @media (max-width: 768px) {
-            h1 { font-size: 36px; }
+            h1 { font-size: 38px; } /* Scales nicely on mobile */
             .description { font-size: 20px; }
             button { font-size: 24px; padding: 20px 50px; }
             .ball { width: 80px; height: 80px; line-height: 80px; font-size: 32px; margin: 15px; }
@@ -109,15 +106,13 @@
 <body>
     <div class="container">
         <!-- Official Lotto Texas logo centered above title -->
-        <img src="https://media.nbcdfw.com/2020/08/lotto-texas-logo.jpg?quality=85&strip=all" alt="Official Lotto Texas Logo" class="logo">
+        <img src="https://www.everythinglubbock.com/wp-content/uploads/sites/35/2021/08/Texas-Lottery-Logo-1280.jpg" alt="Official Lotto Texas Logo" class="logo">
 
-        <h1>Texas Lotto Systematic Winning Prediction</h1>
+        <h1>Texas Lotto Smart Predictor</h1>
         <p class="description">
-            Our state-of-the-art unreleased algorithm analyzes every possible combination, 
-            historical frequencies, patterns, and advanced statistical models to deliver 
-            highly accurate number predictions for Lotto Texas (6/54). 
-            Developed over years using official Texas Lottery data — this is the ultimate tool 
-            for systematic winning!
+            Our advanced algorithm uses historical frequencies, patterns, and statistical models 
+            to generate smart number suggestions for Lotto Texas (6/54). 
+            Powered by official Texas Lottery data — your fun tool for better picks!
         </p>
         
         <button onclick="generateNumbers()">Generate Prediction</button>
@@ -131,15 +126,15 @@
 
     <script src="script.js"></script>
 
-    <!-- Random official-style Texas Lotto pick 6 drawing backgrounds (less fade) -->
+    <!-- Random official Texas Lotto pick 6 drawing backgrounds -->
     <script>
         const backgrounds = [
             'https://townsquare.media/site/36/files/2024/10/attachment-Lottery-Balls-Multicolor-Alex-Shuper-via-Unsplash.jpg?w=1200',
             'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Texas_Lottery_drawing.jpg/640px-Texas_Lottery_drawing.jpg',
             'https://www.texasstandard.org/wp-content/uploads/2024/07/lottery_53057889829_o.jpg',
             'https://media.khou.com/assets/KHOU/images/d609af6e-718f-44c4-95f4-08ded73c0ae3/d609af6e-718f-44c4-95f4-08ded73c0ae3_1920x1080.jpg',
-            'https://townsquare.media/site/36/files/2025/07/attachment-lottery-balls-multicolor-alex-shuper-via-unsplash-1.JPG?w=1200',
-            'https://www.kxan.com/wp-content/uploads/sites/40/2015/04/lottery-balls_37199033_ver1.0.jpg?w=1280'
+            'https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=886440116863175',
+            'https://media.cnn.com/api/v1/images/stellar/prod/190328170609-lottery-prep.jpg?q=x_131,y_2,h_941,w_1673,c_crop/w_1280'
         ];
         
         const randomBg = backgrounds[Math.floor(Math.random() * backgrounds.length)];
