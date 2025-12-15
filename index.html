@@ -31,7 +31,8 @@
             border-radius: 25px;
             box-shadow: 0 6px 25px rgba(0,0,0,0.25);
         }
-        .logo { max-width: 450px; width: 85%; margin: 0 auto 50px auto; }
+        .my-logo { max-width: 450px; width: 85%; margin: 0 auto 50px auto; }
+        .texas-logo { max-width: 400px; width: 80%; margin: 40px auto; }
         h1 { font-size: 58px; color: #0047AB; margin: 0 0 40px 0; text-shadow: 3px 3px 6px rgba(0,0,0,0.3); line-height: 1.2; }
         .description { font-size: 28px; line-height: 1.8; margin: 0 auto 60px; max-width: 95%; font-weight: 500; text-shadow: 2px 2px 4px rgba(0,0,0,0.2); }
         button { padding: 30px 70px; font-size: 32px; background: #ffcc00; color: black; border: none; border-radius: 20px; cursor: pointer; box-shadow: 0 8px 20px rgba(0,0,0,0.3); margin-bottom: 60px; font-weight: bold; }
@@ -41,11 +42,11 @@
             h1 { font-size: 42px; }
             .description { font-size: 22px; }
             button { font-size: 26px; padding: 25px 60px; }
-            .logo { max-width: 320px; }
+            .my-logo, .texas-logo { max-width: 320px; }
             .container { padding: 30px; }
         }
 
-        /* Responsive Modal - 80% width, centered, ~40% height feel */
+        /* Responsive Modal */
         .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.7); justify-content: center; align-items: center; padding: 20px; box-sizing: border-box; }
         .modal-content { background: white; padding: 40px; border-radius: 25px; width: 80%; max-width: 900px; max-height: 80vh; overflow-y: auto; text-align: center; box-shadow: 0 10px 40px rgba(0,0,0,0.5); }
         .modal-content h2 { font-size: 36px; color: #0047AB; margin-bottom: 30px; }
@@ -64,10 +65,14 @@
 </head>
 <body>
     <div class="container">
-        <!-- Official high-res Lotto Texas logo (reliable) -->
-        <img src="https://kfoxtv.com/resources/media/fa2dded0-a4b3-428b-bac0-956a3187d602-large16x9_LottoTexas.png?1598303615164" alt="Official Lotto Texas Logo" class="logo">
+        <!-- Your logo at the top -->
+        <img src="0glogo.jpg" alt="My Logo" class="my-logo">
 
         <h1>Texas Lotto Smart Predictor</h1>
+
+        <!-- Official Texas Lottery logo below the title -->
+        <img src="https://content.govdelivery.com/attachments/fancy_images/TXLOTTERY/2022/02/5571829/lotto-texas-extra-logo_original.jpg" alt="Official Lotto Texas Logo" class="texas-logo">
+
         <p class="description">
             Our state-of-the-art experimental top-secret AI is fully integrated and powerful enough 
             to predict the unpredictable. It analyzes historical frequencies, patterns, and advanced 
@@ -99,15 +104,15 @@
 
     <script src="script.js"></script>
 
-    <!-- Reliable random Texas Lotto drawing backgrounds -->
+    <!-- Random reliable Texas Lotto drawing backgrounds -->
     <script>
         const backgrounds = [
-            'https://i.ytimg.com/vi/Wmvh8gkY-QQ/hq720.jpg',
             'https://i.ytimg.com/vi/MnlzOE6oXmc/hq720.jpg',
+            'https://i.ytimg.com/vi/Wmvh8gkY-QQ/hq720.jpg',
+            'https://i.ytimg.com/vi/C5rdvQHdwsA/hq720.jpg',
             'https://townsquare.media/site/159/files/2021/08/attachment-RS34331_GettyImages-916223242-scr.jpg',
-            'https://s.yimg.com/ny/api/res/1.2/LxvfPuEeFMdw6sB.4miLvg--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyNDI7aD04Mjg7Y2Y9d2VicA--/https://media.zenfs.com/en/the-el-paso-times/6f95cc3ffe16b51f1df30f08ee9ff15b',
-            'https://media.nbcdfw.com/2023/10/powerball-texas-GettyImages-1576473824-copy.jpg',
-            'https://dims.apnews.com/dims4/default/b914590/2147483647/strip/true/crop/5259x3506+0+0/resize/599x399!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2Fb3%2F52%2F00926574b91a91fc8d0051a35d0c%2Fc3ceeb71752c41ce94e0aac8aea3bbd6'
+            'https://media.khou.com/assets/KHOU/images/d609af6e-718f-44c4-95f4-08ded73c0ae3/d609af6e-718f-44c4-95f4-08ded73c0ae3_1920x1080.jpg',
+            'https://upload.wikimedia.org/wikipedia/commons/f/f7/Texas_Lottery_drawing.jpg'
         ];
         
         const randomBg = backgrounds[Math.floor(Math.random() * backgrounds.length)];
