@@ -59,7 +59,7 @@
 
         <p class="premium-explain">
             Congratulations! You've accessed our exclusive state-of-the-art experimental AI — systematically tested with proven superior results.<br><br>
-            Below are your Top 10 optimized combinations, generated using advanced frequency analysis, pattern recognition, and predictive modeling for maximum potential.
+            Below are your Top 10 optimized combinations, built around the hottest number (8), its top companions (26 & 31), and the coldest overdue number (45) for maximum edge.
         </p>
 
         <table class="sets-table" id="premiumTable"></table>
@@ -67,7 +67,7 @@
         <p class="disclaimer">For entertainment purposes only. Lotteries are random — no guarantees. Enjoy your premium access!</p>
     </div>
 
-    <!-- Same reliable background -->
+    <!-- Reliable background -->
     <script>
         const backgrounds = [
             'https://i.ytimg.com/vi/JCnRa03ccEc/maxresdefault.jpg',
@@ -81,22 +81,22 @@
         document.body.style.backgroundImage = `url('${randomBg}')`;
     </script>
 
-    <!-- Generate 10 rows, each with 6 balls -->
+    <!-- Premium Elite Logic - 10 unique sets with variations -->
     <script>
-        const hotNumbers = [4, 8, 26, 31, 38, 39, 49, 15, 19, 27]; // Current hot numbers
+        const core = [8, 45, 26, 31]; // Starter: hottest (8), coldest due (45), top companions (26, 31)
+        const hotPool = [4, 15, 19, 38, 39, 49, 21, 27]; // Other top hots for variation
 
-        function generateSet() {
-            const numbers = new Set();
-            while (numbers.size < 6) {
-                let num;
-                if (Math.random() < 0.7) { // Strong hot bias for premium
-                    num = hotNumbers[Math.floor(Math.random() * hotNumbers.length)];
-                } else {
-                    num = Math.floor(Math.random() * 54) + 1;
-                }
-                numbers.add(num);
+        function generateEliteSet(variation = 0) {
+            const set = new Set(core);
+            // Variation: sometimes swap one companion or add extra hot
+            if (variation % 3 === 1) set.delete(31); // Swap companion
+            if (variation % 3 === 2) set.delete(26);
+
+            while (set.size < 6) {
+                const extra = hotPool[Math.floor(Math.random() * hotPool.length)];
+                set.add(extra);
             }
-            return Array.from(numbers).sort((a, b) => a - b);
+            return Array.from(set).sort((a, b) => a - b);
         }
 
         const table = document.getElementById('premiumTable');
@@ -111,7 +111,7 @@
             `;
             table.appendChild(row);
 
-            const nums = generateSet();
+            const nums = generateEliteSet(i);
             const ballsDiv = document.getElementById(`balls${i}`);
             nums.forEach(n => {
                 const ball = document.createElement('div');
