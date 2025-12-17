@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Premium Predictions - Texas Lotto Smart Predictor</title>
     <style>
-        /* Same as before */
         html, body { height: 100%; margin: 0; padding: 0; }
         body {
             background: rgba(255, 255, 255, 0.3) fixed;
@@ -82,22 +81,24 @@
         document.body.style.backgroundImage = `url('${randomBg}')`;
     </script>
 
-    <!-- Elite Logic Test - 10 unique sets -->
+    <!-- Elite Premium Logic - 10 unique sets with variations -->
     <script>
-        const core = [8, 45, 26, 31]; // Hottest (8) + companions (26,31) + coldest due (45)
-        const hotPool = [4, 15, 19, 38, 39, 49, 21, 27]; // Other top hots
+        const core = [8, 45, 26, 31]; // Starter core: hottest (8), coldest due (45), top companions (26, 31)
+        const hotPool = [4, 15, 19, 38, 39, 49, 21, 27]; // Other top hots for filling/variation
 
         function generateEliteSet(variation = 0) {
             const set = new Set(core);
-            // Variation for uniqueness
-            if (variation % 4 === 1) set.delete(31); // Swap companion
-            if (variation % 4 === 2) set.delete(26);
-            if (variation % 4 === 3) set.add(hotPool[Math.floor(Math.random() * hotPool.length)]); // Extra hot
 
+            // Add variation for uniqueness across 10 sets
+            if (variation % 3 === 1) set.delete(31); // Occasionally drop one companion
+            if (variation % 3 === 2) set.delete(26);
+
+            // Fill to 6 with hot pool (high bias)
             while (set.size < 6) {
                 const extra = hotPool[Math.floor(Math.random() * hotPool.length)];
-                if (!set.has(extra)) set.add(extra);
+                set.add(extra);
             }
+
             return Array.from(set).sort((a, b) => a - b);
         }
 
